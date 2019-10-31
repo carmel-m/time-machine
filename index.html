@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +18,33 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
+    <!-- Navbar w/ search form-->
+    <div class="col-sm-12 bg-dark">
+        <nav class="navbar navbar-light">
+
+            <!-- div with current time/date? -->
+            <div class="col-sm-4"></div>
+
+            <!-- center div with headline -->
+            <div class="col-sm-4">
+                <a class="navbar-brand text-white">Time Machine</a>
+            </div>
+
+            <!-- search form -->
+            <div class="col-sm-4">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
 
     <!-- Headline Section -->
     <!-- New row -->
@@ -29,7 +53,7 @@
             <div class="col-sm-12 text-center" id="headline">
                 <h3>Headline goes here!</h3>
                 <h6>Maybe add buttons here?</h6>
-        
+
             </div>
         </div>
 
@@ -42,25 +66,31 @@
                         <h5>Placeholder Image</h5>
                         <img src="https://via.placeholder.com/300" alt="Placeholder Image">
                     </div>
-                    
+
                     <!--  3 nested rows on right side of page  -->
                     <div class="col-sm-5">
                         <h4>Some text</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore optio consequuntur rem voluptates eum voluptatibus nisi aliquid, mollitia qui dicta, fuga veritatis, voluptatem doloribus incidunt quibusdam esse non repudiandae beatae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore optio consequuntur rem
+                            voluptates eum voluptatibus nisi aliquid, mollitia qui dicta, fuga veritatis, voluptatem
+                            doloribus incidunt quibusdam esse non repudiandae beatae?</p>
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4>Some text</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut voluptates ducimus libero nemo neque, voluptas eum suscipit fuga vel delectus! Illum obcaecati adipisci ad, dignissimos impedit consequatur vitae vel laboriosam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut voluptates ducimus
+                                    libero nemo neque, voluptas eum suscipit fuga vel delectus! Illum obcaecati adipisci
+                                    ad, dignissimos impedit consequatur vitae vel laboriosam.</p>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4>Some text</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut voluptates ducimus libero nemo neque, voluptas eum suscipit fuga vel delectus! Illum obcaecati adipisci ad, dignissimos impedit consequatur vitae vel laboriosam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut voluptates ducimus
+                                    libero nemo neque, voluptas eum suscipit fuga vel delectus! Illum obcaecati adipisci
+                                    ad, dignissimos impedit consequatur vitae vel laboriosam.</p>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,5 +126,13 @@
 
     </div>
 
+    <!-- footer -->
+    <footer class="footer bg-dark">
+        <div class="container">
+            <p class="text-white text-center align-center">Copyright 2019</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
