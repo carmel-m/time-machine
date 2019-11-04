@@ -1,0 +1,33 @@
+body {
+    background-color: #D4D4D4;
+}
+
+.jumbotron {
+    font-family: 'Old Standard TT', serif;
+    height: 200px;
+}
+
+.jumbotron h1 {
+    color: white;
+    font-weight: 700;
+}
+
+.jumbotron h5 {
+    color: white;
+    font-weight: 700;
+}
+
+#search {
+    margin-top: 20px;
+    font-family: 'Old Standard TT', serif;
+
+}
+
+.footer {
+    font-family: 'Old Standard TT', serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px; 
+    background-color: #f5f5f5;
+    }
