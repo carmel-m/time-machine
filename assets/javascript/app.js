@@ -3,22 +3,60 @@ $(document).ready(function () {
     //Set global variables
     var year = "";
 
+    //Function that clears all info so nothing appends/prepends 
     function clear() {
         $("#yearDump").empty();
         $("#topmovies").empty();
         $("#topshows").empty();
         $("#top-news").empty();
         $("#gifDump").empty();
-      }
+    }
+
+    //Function that hides original index layout until search is initially started
+    function hideSearch() {
+        $("#navigation").hide();
+        $("#image").hide();
+        $("#top-news").hide();
+        $("#moviesandshows").hide();
+    }
+
+    //Function that shows homepage 
+    function showHome() {
+        $("#headline").show();
+        $("#search").show();
 
 
-    //on click of the search bar at top of page
+    }
+    hideSearch();
+    showHome();
+
+    //Function that hides original index layout until search is initially started
+    function showSearch() {
+        $("#navigation").show();
+        $("#image").show();
+        $("#top-news").show();
+        $("#moviesandshows").show();
+    }
+
+    //Function that hides homepage
+    function hideHome() {
+        $("#headline").hide();
+        $("#search").hide();
+
+
+    }
+
+
+    //On click of the search bar at top of page
     $("#searchButton").on("click", function (event) {
         event.preventDefault();
 
         clear();
+        hideHome();
+        showSearch();
 
-        //sets year variable to the year that was searched on index.html
+
+        //Sets year variable to the year that was searched on index.html
         year = $("#searchYear").val().trim();
         console.log(year);
         
@@ -47,18 +85,18 @@ $(document).ready(function () {
         //     $("body").addClass("theme3");
         // }
 
-        //on click movie section
+        //On click movie section
         //===================================================================================================
         var moviedbURL = "https://api.themoviedb.org/3/discover/movie?primary_release_year=" + year + "&sort_by=popularity.desc&api_key=5519798d319118490262dd96bcfc5e34";
 
-        //ajax call to themoviedb to get a year's most popular movies
+        //Ajax call to themoviedb to get a year's most popular movies
         $.ajax({
             url: moviedbURL,
             method: "GET"
         }).then(function (movieResponse) {
             console.log(movieResponse);
 
-            //for loop that grabs title of top 10 movies of searched year
+            //For loop that grabs title of top 10 movies of searched year
             for (i = 0; i < 10; i++) {
                 var movieTitle = movieResponse.results[i].title;
                 console.log(movieTitle);
@@ -70,18 +108,18 @@ $(document).ready(function () {
         });
         //===================================================================================================
 
-        //on click tv shows
+        //On click tv shows
         //===============================================================================================
         var tvURL = "https://api.themoviedb.org/3/discover/tv?first_air_date_year=" + year + "&sort_by=popularity.desc&api_key=5519798d319118490262dd96bcfc5e34";
 
-        //ajax call to themoviedb to get a year's most popular tv shows
+        //Ajax call to themoviedb to get a year's most popular tv shows
         $.ajax({
             url: tvURL,
             method: "GET"
         }).then(function (tvResponse) {
             console.log(tvResponse);
 
-            // for loop that grabs title of top 10 movies of searched year
+            //For loop that grabs title of top 10 movies of searched year
             for (i = 0; i < 10; i++) {
                 var showTitle = tvResponse.results[i].name;
                 console.log(showTitle);
@@ -93,11 +131,11 @@ $(document).ready(function () {
         });
         //===================================================================================================
 
-        //on click nyt headline section
+        //On click nyt headline section
         //===================================================================================================
         var nytURL = "https://api.nytimes.com/svc/archive/v1/" + year + "/11.json?api-key=0ArbXCzxyFGrfyavgsWmMGmFxb0qoVTb";
 
-        //ajax call to nyt to get some of the year's headlines
+        //Ajax call to nyt to get some of the year's headlines
         $.ajax({
             url: nytURL,
             method: "GET"
@@ -122,7 +160,7 @@ $(document).ready(function () {
         });
         //===================================================================================================
 
-        //on click giphy section
+        //On click giphy section
         //===================================================================================================
         var giphyURL = "https://api.giphy.com/v1/gifs/random?api_key=BYBsCAYxfGcNZA0LGOL6tw6AMo0HxPrS&tag=" + year + "&rating=G";
 
@@ -131,46 +169,45 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response);
-            console.log(response.data.images.original_still.url);
-            console.log(response.data.images.original.url);
-
-            // Creating and storing an image tag
+            
+            var movingGif = response.data.images.fixed_height.url;
+            var stillGif = response.data.images.fixed_height_still.url;
             var pageGif = $("<img>");
-            pageGif.attr("src", response.data.images.original_still.url);
-            pageGif.attr("alt", "A random image from an appropriate year");
-            pageGif.attr("data-still", response.data.images.original_still.url);
-            pageGif.attr("data-move", response.data.images.original.url);
-            pageGif.attr("data-state", "still");
+           
             pageGif.attr("class", "gif");
+            pageGif.attr("src", stillGif);
+            pageGif.attr("alt", "A random image from an appropriate year");
+            pageGif.attr("data-still", stillGif);
+            pageGif.attr("data-moving", movingGif);
+            pageGif.attr("data-state", "still");
 
-            // Prepending the pageGif to the images div
+            //Prepending the pageGif to the images div
             $("#gifDump").prepend(pageGif);
         });
         //===============================================================================================
 
 
 
-    }); //end of on click submit=============================================================================
+    }); //End of on click submit=============================================================================
 
+    //Function that starts/stops a gif when it is clicked
+    function startStop(){
+		var state = $(this).attr("data-state");
+		var movingImage = $(this).attr("data-moving");
+		var stillImage = $(this).attr("data-still");
 
-    //on-click function to make pictures move
-    $(".gif").on("click", function () {
-        var movingGif = $(this).attr("data-state");
-        //that should grab the "data-state" of the gif that was clicked on, and set it as a variable
-        //so now, i'll have an "if statement" that should change it to "animate", otherwise it will reset to the default "still".
-        if (movingGif === "still") {
-            //so i expect this to toggle the "src" of the gif by looking inside the gif's attributes, then change the "data-state" attribute as well.
-            $(this).attr("src", $(this).attr("data-move"));
-            $(this).attr("data-state", "move");
-        } else {
-            //otherwise, it must be animated, thus, reset it to "still"
-            $(this).attr("src", $(this).attr("data-still"));
+		if (state == "still") {
+            $(this).attr("src", movingImage);
+            $(this).attr("data-state", "moving");
+		}
+
+		else if (state == "moving") {
+            $(this).attr("src", stillImage);
             $(this).attr("data-state", "still");
         }
-    });
+	}
     
+    //On click that will start/stop a gif when clicked
+    $(document).on("click", ".gif", startStop);
 
 });
-
-
-
