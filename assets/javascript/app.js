@@ -1,6 +1,6 @@
 $(document).ready(function () {
-
-    //Set global variables
+    
+  //Set global variables
     var year = "";
 
     //on click of the search bar at top of page
@@ -10,6 +10,17 @@ $(document).ready(function () {
         //sets year variable to the year that was searched on index.html
         year = $("#searchYear").val().trim();
         console.log(year);
+        
+        if (1960 <= year && year < 1980){
+          $("body").removeClass();
+          $("body").addClass("theme1");
+        } else if (1980 <= year && year < 2000){
+          $("body").removeClass();
+          $("body").addClass("theme2");
+        } else if (2000 <= year && year < 2020){
+          $("body").removeClass();
+          $("body").addClass("theme3");
+        }
 
         //on click movie section
         //===================================================================================================
@@ -131,7 +142,6 @@ $(document).ready(function () {
     });
 
 });
-
 
 
 
