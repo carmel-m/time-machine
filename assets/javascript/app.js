@@ -13,13 +13,10 @@ $(document).ready(function () {
 
 
     //on click of the search bar at top of page
-    $("#search").on("click", function (event) {
+    $("#searchButton").on("click", function (event) {
         event.preventDefault();
 
-
-
         clear();
-        
 
         //sets year variable to the year that was searched on index.html
         year = $("#searchYear").val().trim();
