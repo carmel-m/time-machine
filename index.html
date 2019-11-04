@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Enter our Time Machine!</title>
+    
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Acme|Courgette|Fredericka+the+Great|Michroma|Permanent+Marker|Press+Start+2P|Righteous&display=swap" rel="stylesheet">
 
@@ -13,8 +14,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- JavaScript -->
-    <!-- <script src="../time-machine/timeMachineApi.js"></script> -->
-    <script src="./assets/javascript/app.js"></script>
+    <script src="assets/javascript/app.js"></script>
+
+    <!-- Moment.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
@@ -31,8 +34,10 @@
     <div class="col-sm-12 bg-dark">
         <nav class="navbar navbar-light">
 
-            <!-- div with current time/date? -->
-            <div class="col-sm-4"></div>
+            <!-- div with moment.js -->
+            <div class="col-sm-4">
+                <div id="yearDump"></div>
+            </div>
 
             <!-- center div with headline -->
             <div class="col-sm-4">

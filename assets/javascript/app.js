@@ -10,7 +10,8 @@ $(document).ready(function () {
         //sets year variable to the year that was searched on index.html
         year = $("#searchYear").val().trim();
         console.log(year);
-        //===================================================================================================================
+        
+        //===================================================================================================
         //okay, so this code will take an input variable named "year". it will expect a string like "YYYY".
         //It will output a phrase declaring the passage of time.
         //it will create an <h3> and put that <h3> in a place called "yearDump"
@@ -22,9 +23,9 @@ $(document).ready(function () {
         $("#yearDump").empty();
         $("#yearDump").prepend(yearsAgo);
         console.log(yearsAgo);
-        //needs an HTML element with an id="yearDump"
-        //===================================================================================================================
+        //===================================================================================================
 
+        //changes css class depending on year searched
         if (1960 <= year && year < 1980) {
             $("body").removeClass();
             $("body").addClass("theme1");
