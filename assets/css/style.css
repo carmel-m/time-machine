@@ -55,3 +55,32 @@ body {
   height: 60px; /* Set the fixed height of the footer here */
   background-color: #f5f5f5;
   }
+
+/* Load Page CSS */
+body {
+  background-color: #D4D4D4;
+}
+
+.jumbotron {
+  font-family: 'Old Standard TT', serif;
+  height: 200px;
+}
+
+.jumbotron h1 {
+  color: white;
+  font-weight: 700;
+}
+
+.jumbotron h5 {
+  color: white;
+  font-weight: 700;
+}
+
+#searchButton {
+  margin-top: 20px;
+  font-family: 'Old Standard TT', serif;
+
+}
+
+
+/* End of Load Page CSS */

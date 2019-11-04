@@ -3,9 +3,20 @@ $(document).ready(function () {
     //Set global variables
     var year = "";
 
+    function clear() {
+        $("#yearDump").empty();
+        $("#topmovies").empty();
+        $("#topshows").empty();
+        $("#top-news").empty();
+        $("#gifDump").empty();
+      }
+
+
     //on click of the search bar at top of page
-    $("#search").on("click", function (event) {
+    $("#searchButton").on("click", function (event) {
         event.preventDefault();
+
+        clear();
 
         //sets year variable to the year that was searched on index.html
         year = $("#searchYear").val().trim();
@@ -20,7 +31,6 @@ $(document).ready(function () {
         var yearDisplay = "A snapshot of " + year3 + " years ago";
         var yearsAgo = $("<h3>");
         yearsAgo.text(yearDisplay);
-        $("#yearDump").empty();
         $("#yearDump").prepend(yearsAgo);
         console.log(yearsAgo);
         //===================================================================================================
@@ -158,6 +168,7 @@ $(document).ready(function () {
             $(this).attr("data-state", "still");
         }
     });
+    
 
 });
 
