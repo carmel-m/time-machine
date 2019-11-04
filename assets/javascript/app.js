@@ -36,16 +36,16 @@ $(document).ready(function () {
         //===================================================================================================
 
         //changes css class depending on year searched
-        if (1960 <= year && year < 1980) {
-            $("body").removeClass();
-            $("body").addClass("theme1");
-        } else if (1980 <= year && year < 2000) {
-            $("body").removeClass();
-            $("body").addClass("theme2");
-        } else if (2000 <= year && year < 2020) {
-            $("body").removeClass();
-            $("body").addClass("theme3");
-        }
+        // if (1960 <= year && year < 1980) {
+        //     $("body").removeClass();
+        //     $("body").addClass("theme1");
+        // } else if (1980 <= year && year < 2000) {
+        //     $("body").removeClass();
+        //     $("body").addClass("theme2");
+        // } else if (2000 <= year && year < 2020) {
+        //     $("body").removeClass();
+        //     $("body").addClass("theme3");
+        // }
 
         //on click movie section
         //===================================================================================================
@@ -103,17 +103,20 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (newsResponse) {
             console.log(newsResponse);
-            for (var i = 0; i < 5; i++) {
+            for (var i = 0; i < 3; i++) {
                 var headline = newsResponse.response.docs[i].headline.main;;
                 var snippet = newsResponse.response.docs[i].snippet;
                 var URL = newsResponse.response.docs[i].web_url;
+
+
                 console.log(headline);
                 console.log(snippet);
                 console.log(URL);
+
                 var newsDiv = $("<div>");
                 newsDiv.append("<h4><span>" + (i + 1) + ". " + " </span> " + headline + "</h4>");
                 newsDiv.append("<p>" + snippet + "</p>");
-                newsDiv.append("<p>" + URL + "</p>");
+                newsDiv.append("<p id='url'>" + "Continue reading: " + URL + "</p>");
                 $("#top-news").append(newsDiv);
             }
         });

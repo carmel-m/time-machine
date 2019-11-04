@@ -4,6 +4,8 @@
   margin:0 auto;
   display: block;
   text-align: center;
+  font-size: 20px;
+  font-family: 'Old Standard TT', serif;
 }
 
 html {
@@ -12,7 +14,7 @@ html {
 }
 
 /* backgroundImage and font should be changed with time travel */
-.theme1 {
+/* .theme1 {
   background-image: url("../images/oldNewspaper.jpg");
   font-family: 'Fredericka the Great', cursive;
   color: dimgray;
@@ -29,14 +31,21 @@ html {
   background-image: url("../images/AI-image.jpg");
   font-family: 'Michroma', sans-serif;
   color: bisque;
+} */
+
+#url {
+  font-size: 12px;
 }
 
 body {
-
   margin-bottom: 60px; /* Margin bottom by footer height */
   background-size: 1280px;
   width: 100%;
-  
+}
+
+.main {
+  background-image: url("../images/paper_@2X.png");
+  font-family: 'Old Standard TT', serif;
 }
 
 .footer {
