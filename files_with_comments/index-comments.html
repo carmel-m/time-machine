@@ -48,47 +48,58 @@
         </form>
     </div>
 
-    <!-- Navbar -->
+    <!-- Navbar w/ search form-->
     <div class="col-sm-12 bg-dark" id="navigation">
         <nav class="navbar navbar-light">
 
-            <!-- Moment.js div -->
+            <!-- div with moment.js -->
             <div class="col-sm-4 text-center">
                 <div id="yearDump"></div>
             </div>
 
-            <!-- Center headline div -->
+            <!-- center div with headline -->
             <div class="col-sm-4">
-                <h1 class="text-light text-center font-weight-bold" id="header">Time Machine</h1>
+                <h1 class="text-light text-center font-weight-bold" id="pageName">Time Machine</h1>
             </div>
 
-            <!-- Navbar search div -->
+            <!-- search form -->
             <div class="col-sm-4">
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2 searchYear" type="search" placeholder="Search here..." aria-label="Search" id="searchYear2">
-                    
-                    <button class="btn btn-outline-warning my-2 my-sm-0 searchButton" type="button" id="searchButton2">Search</button>
+                    <input class="form-control mr-sm-2 searchYear" type="search" placeholder="Search a different year..." aria-label="Search" id="searchYear2">
+                    <button class="btn btn-outline-warning my-2 my-sm-0 searchButton" type="button"
+                        id="searchButton2">Search</button>
                     <p class="alert"></p>
                 </form>
             </div>
         </nav>
     </div>
 
-
+    <!-- Headline Section -->
+    <!-- New row -->
     <div class="containter">
+        <!-- <div class="row border border-dark">
+            <div class="col-sm-12 text-center" id="headline">
+                <h3>Headline goes here!</h3>
+                <h6>Maybe add buttons here?</h6>
+
+            </div>
+        </div> -->
+
         <!-- New row -->
         <div class="row">
-            <div class="col-sm-12 main">
+            <div class="col-sm-12">
                 <!-- Nested -->
                 <div class="row">
-                    <div class="col-sm-6 text-center"  id="giphy"> 
-                        <h5 id="giphyTitle">Here is a randomly generated Gif relating to the searched year:</h5>
-                        <div id="gifDump"></div>
-                    </div>
+                    <div class="col-sm-6 card" style="width:400px" id="image">
+                            <div class="card-body">
+                                <h5 class="card-title">Gifs About this Year</h5>
+                                <div id="gifDump"></div>
+                            </div>
+                        </div>
 
-                    <div class="col-sm-6 text-center" id="NYT">
-                        <h5>NYT articles from the searched year and current month:</h5>
-                        <div id="top-news"></div>
+                    <!--  3 nested rows on right side of page  -->
+                    <div class="col-sm-6" id="top-news">
+                        <h4>Random Articles from this Year!</h4>
                     </div>
                 </div>
             </div>
@@ -96,14 +107,14 @@
 
         <!-- New row -->
         <!-- 2 columns at the bottom of page -->
-        <div class="row main" id="moviesandshows">
+        <div class="row border border-dark main" id="moviesandshows">
             <div class="col-sm-6" id="entiremoviesDiv">
-                <h5 class="text-center" id="movietext">The top 4 movies of this year were:</h5>
+                <h4 id="movietext">The top 4 movies of this year were:</h4>
                 <div id="topmovies"></div>
             </div>
 
             <div class="col-sm-6" id="entireshowsDiv">
-                <h5 class="text-center" id="showtext">The top 4 TV shows that began airing this year were:</h5>
+                <h4 id="showtext">The top 4 TV shows that began airing this year were:</h4>
                 <div id="topshows"></div>
             </div>
 

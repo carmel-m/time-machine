@@ -1,3 +1,58 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 30px;
+  background-color: #D4D4D4;
+}
+
+.main {
+  background-image: url("../images/papyrus.png");
+  background-size: cover;
+  background-blend-mode: lighten;
+  font-family: 'Old Standard TT', serif;
+}
+
+.searchYear {
+  font-family: 'Old Standard TT', serif;
+}
+
+.searchButton {
+  font-family: 'Old Standard TT', serif;
+}
+
+.alert {
+  color: #d9534f;
+  font-size: 11px;
+}
+
+/* CSS for home page */
+.jumbotron {
+  font-family: 'Old Standard TT', serif;
+  height: 200px;
+}
+
+.jumbotron h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.jumbotron h5 {
+  color: #f0ad4e;
+  font-weight: 700;
+}
+
+#searchButton1 {
+  margin-top: 15px;
+  width: 100px;
+  height: 50px;
+}
+/* End of home page css */
+
+/* CSS for navbar */
 .navbar-brand {
   float:none;
   opacity: 0.5;
@@ -8,113 +63,81 @@
   font-family: 'Old Standard TT', serif;
 }
 
-#pageName{
-  font-family: 'Old Standard TT', serif;
-}
-
 #yearDump {
   color: #f0ad4e;
   font-family: 'Old Standard TT', serif;
   font-style: italic; 
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-/* backgroundImage and font should be changed with time travel */
-/* .theme1 {
-  background-image: url("../images/oldNewspaper.jpg");
-  font-family: 'Fredericka the Great', cursive;
-  color: dimgray;
-}
-
-.theme2 {
-  background-image: url("../images/space-exploration.jpg");
-  font-family: 'Press Start 2P', cursive;
-  color: lightgray;
-
-}
-
-.theme3 {
-  background-image: url("../images/AI-image.jpg");
-  font-family: 'Michroma', sans-serif;
-  color: bisque;
-} */
-
-#url {
-  font-size: 12px;
-}
-
-body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
-  background-size: 1280px;
-  width: 100%;
-}
-
-.main {
-  background-image: url("../images/paper_@2X.png");
+#header {
   font-family: 'Old Standard TT', serif;
 }
+/* End of navbar css */
 
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 30px; /* Set the fixed height of the footer here */
-  background-color: #f5f5f5;
-  font-family: 'Old Standard TT', serif;
-  }
-
-/* Home Page CSS */
-body {
-  background-color: #D4D4D4;
+/* CSS for NYT section */
+a {
+  font-size: 16px;
+  color: #4E91F0;
+  text-decoration: underline;
 }
 
-.jumbotron {
+#NYT {
   font-family: 'Old Standard TT', serif;
-  height: 200px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #343A40;
 }
 
-.jumbotron h1 {
+#NYT h5 {
   color: white;
-  font-weight: 700;
+  background-color: #343A40;
+  margin-top: 10px;
 }
+/* End of css for NYT section */
 
-.jumbotron h5 {
-  color: #f0ad4e;
-  font-weight: 700;
-}
-
-#searchButton {
-  margin-top: 20px;
+/* CSS for giphy section */
+#giphyTitle {
   font-family: 'Old Standard TT', serif;
+  color: white;
+  background-color: #343A40;
+  margin-top: 10px;
 }
 
-#searchYear2 {
-  font-family: 'Old Standard TT', serif;
+.gif {
+  height: 300px;
+  width: 300px;
 }
 
-#searchButton2 {
-  font-family: 'Old Standard TT', serif;
+#giphy {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #343A40;
+}
+/* End of css for giphy section */
+
+/* CSS for movies+show sections */
+#entiremoviesDiv {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #343A40;
 }
 
-.card-title {
-  font-family: 'Old Standard TT', serif;
-}
-
-#top-news {
-  font-family: 'Old Standard TT', serif;
+#entireshowsDiv {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #343A40;
 }
 
 #movietext {
-  margin-left: 20px;
+  color: white;
+  background-color: #343A40;
+  margin-top: 10px;
 }
 
 #showtext {
-  margin-left: 20px;
+  color: white;
+  background-color: #343A40;
+  margin-top: 10px;
 }
 
 img {
@@ -133,15 +156,15 @@ width: 100px;
   margin: 20px;
   width: 100px;
 }
+/* End of css for movie+show sections  */
 
-#searchButton1 {
-  margin-top: 15px;
-  width: 100px;
-  height: 50px;
+/* CSS for footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #f5f5f5;
   font-family: 'Old Standard TT', serif;
 }
-
-#searchYear1 {
-  font-family: 'Old Standard TT', serif;
-}
-/* End of Home Page CSS */
+/* End of css for footer */
