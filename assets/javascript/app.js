@@ -198,7 +198,7 @@ $(document).ready(function () {
     });
     //===============================================================================================
     } else {
-    $("#alert").text("Please enter a year between 1950 and 2019");
+    $(".alert").text("Please enter a year between 1950 and 2019");
 
     }
 
