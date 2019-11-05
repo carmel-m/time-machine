@@ -109,9 +109,9 @@ $(document).ready(function () {
         movieDiv.addClass('movie');
         var movieImage = movieResponse.results[i].poster_path;
         var movieTitle = movieResponse.results[i].title;
-        var movieImageText = $("<img>").attr("src", "https://image.tmdb.org/t/p/w500" + movieImage);
+        var movieImage = $("<img>").attr("src", "https://image.tmdb.org/t/p/w500" + movieImage);
         var movieTitleText = $("<p>").text((i + 1) + ": " + movieTitle);
-        movieDiv.append(movieImageText, movieTitleText)
+        movieDiv.append(movieImage, movieTitleText)
         $("#topmovies").append(movieDiv);
       }
     });
@@ -163,7 +163,7 @@ $(document).ready(function () {
         console.log(snippet);
         console.log(URL);
 
-        var newsDiv = $("<div>").attr("class", "rounded-top border p-3");
+        var newsDiv = $("<div>").attr("class", "rounded-top border p-1");
         newsDiv.append("<h5><span>" + (i + 1) + ". " + " </span> " + headline + "</h5>");
         newsDiv.append("<p>" + snippet + "</p>");
         newsDiv.append("<a href=" + URL + ">Continue Reading</a>");
