@@ -8,6 +8,16 @@
   font-family: 'Old Standard TT', serif;
 }
 
+#pageName{
+  font-family: 'Old Standard TT', serif;
+}
+
+#yearDump {
+  color: #f0ad4e;
+  font-family: 'Old Standard TT', serif;
+  font-style: italic; 
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -48,6 +58,7 @@ body {
   font-family: 'Old Standard TT', serif;
 }
 
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -73,23 +84,64 @@ body {
 }
 
 .jumbotron h5 {
-  color: white;
+  color: #f0ad4e;
   font-weight: 700;
 }
 
 #searchButton {
   margin-top: 20px;
   font-family: 'Old Standard TT', serif;
+}
 
+#searchYear2 {
+  font-family: 'Old Standard TT', serif;
+}
+
+#searchButton2 {
+  font-family: 'Old Standard TT', serif;
+}
+
+.card-title {
+  font-family: 'Old Standard TT', serif;
+}
+
+#top-news {
+  font-family: 'Old Standard TT', serif;
+}
+
+#movietext {
+  margin-left: 20px;
+}
+
+#showtext {
+  margin-left: 20px;
+}
+
+img {
+height: 175px;
+width: 100px;
 }
 
 .movie {
   float: left;
   margin: 20px;
+  width: 100px;
 }
 
 .show {
   float: left;
   margin: 20px;
+  width: 100px;
+}
+
+#searchButton1 {
+  margin-top: 15px;
+  width: 100px;
+  height: 50px;
+  font-family: 'Old Standard TT', serif;
+}
+
+#searchYear1 {
+  font-family: 'Old Standard TT', serif;
 }
 /* End of Home Page CSS */
