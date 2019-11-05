@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Enter our Time Machine!</title>
     <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Acme|Courgette|Fredericka+the+Great|Michroma|Permanent+Marker|Press+Start+2P|Righteous&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Acme|Courgette|Fredericka+the+Great|Michroma|Permanent+Marker|Press+Start+2P|Righteous&display=swap"
+        rel="stylesheet">
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -28,35 +30,34 @@
 
 <body>
     <!-- Navbar w/ search form-->
-    <div class="col-sm-12 bg-dark">
-        <nav class="navbar navbar-light">
+    <!-- <div class="col-sm-12 bg-dark">
+        <nav class="navbar navbar-light"> -->
 
-            <!-- div with current time/date? -->
-            <div class="col-sm-4"></div>
+    <!-- div with current time/date? -->
+    <!-- <div class="col-sm-4"></div> -->
 
-            <!-- center div with headline -->
-            <div class="col-sm-4">
+    <!-- center div with headline -->
+    <!-- <div class="col-sm-4">
                 <a class="navbar-brand text-white">Time Machine</a>
             </div>
-
-            <!-- search form -->
-            <div class="col-sm-4">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchYear">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="search">Search</button>
-                </form>
-            </div>
         </nav>
-    </div>
+    </div> -->
+
+    <!-- search form -->
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+
+        </form>
+    </nav>
 
     <!-- Headline Section -->
     <!-- New row -->
     <div class="containter">
         <div class="row border border-dark">
             <div class="col-sm-12 text-center" id="headline">
-                <h3>Headline goes here!</h3>
-                <h6>Maybe add buttons here?</h6>
-
+                <label for="searchYear">I want to travel the year</label>
+                <input class="form-control mr-sm-2 text-center" type="search" placeholder="" aria-label="Search" id="searchYear">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Jump into</button>
             </div>
         </div>
 
@@ -72,7 +73,7 @@
 
                     <!--  3 nested rows on right side of page  -->
                     <div class="col-sm-6" id="top-news">
-                        <h4>Random Articles from this Year!</h4>       
+                        <h4>Random Articles from this Year!</h4>
                     </div>
                 </div>
             </div>
@@ -81,17 +82,17 @@
         <!-- New row -->
         <!-- 6 columns at the bottom of page -->
         <div class="row border border-dark">
-            <div class="col-sm-2">
+            <div class="col-sm-6">
                 <h4>The top 10 movies from this year were:</h4>
                 <div id="topmovies"></div>
             </div>
 
-            <div class="col-sm-2">
+            <div class="col-sm-6">
                 <h4>The top 10 tv shows that began airing this year were:</h4>
                 <div id="topshows"></div>
             </div>
 
-            <div class="col-sm-2">
+            <!-- <div class="col-sm-2">
                 <h4>Some Text</h4>
             </div>
 
@@ -105,7 +106,7 @@
 
             <div class="col-sm-2">
                 <h4>Some Text</h4>
-            </div>
+            </div> -->
 
         </div>
 
