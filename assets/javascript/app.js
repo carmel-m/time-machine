@@ -98,12 +98,17 @@ $(document).ready(function () {
 
             //For loop that grabs title of top 10 movies of searched year
             for (i = 0; i < 10; i++) {
-                var movieTitle = movieResponse.results[i].title;
-                console.log(movieTitle);
-                var movieTitleText = $("<p>").text((i + 1) + ": " + movieTitle);
-
-                $("#topmovies").append(movieTitleText);
-
+                if (i < 4) {
+                  var movieTitle = movieResponse.results[i].backdrop_path;
+                  var movieTitleText = $("<img>").attr("src", "https://image.tmdb.org/t/p/w500" + movieResponse.results[i].backdrop_path);
+                  $("#topmovies").append(movieTitleText);
+                } else {
+                  var movieTitle = movieResponse.results[i].title;
+                  console.log(movieTitle);
+                  var movieTitleText = $("<p>").text((i + 1) + ": " + movieTitle);
+        
+                  $("#topmovies").append(movieTitleText);
+                }
             }
         });
         //===================================================================================================
