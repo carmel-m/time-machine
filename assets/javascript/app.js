@@ -163,12 +163,12 @@ $(document).ready(function () {
         console.log(snippet);
         console.log(URL);
 
-        var newsDiv = $("<div>");
-        newsDiv.append("<h4><span>" + (i + 1) + ". " + " </span> " + headline + "</h4>");
+        var newsDiv = $("<div>").attr("class", "rounded-top border p-3");
+        newsDiv.append("<h5><span>" + (i + 1) + ". " + " </span> " + headline + "</h5>");
         newsDiv.append("<p>" + snippet + "</p>");
-        newsDiv.append("<p id='url'>" + "Continue reading: " + URL + "</p>");
+        newsDiv.append("<a href=" + URL + ">Continue Reading</a>");
         $("#top-news").append(newsDiv);
-      }
+    }
     });
     //===================================================================================================
 
@@ -186,7 +186,7 @@ $(document).ready(function () {
       var stillGif = response.data.images.fixed_height_still.url;
       var pageGif = $("<img>");
 
-      pageGif.attr("class", "gif");
+      pageGif.attr("class", "gif card-img-bottom");
       pageGif.attr("src", stillGif);
       pageGif.attr("alt", "A random image from an appropriate year");
       pageGif.attr("data-still", stillGif);
