@@ -83,5 +83,13 @@ body {
 
 }
 
+.movie {
+  float: left;
+  margin: 20px;
+}
 
+.show {
+  float: left;
+  margin: 20px;
+}
 /* End of Home Page CSS */
