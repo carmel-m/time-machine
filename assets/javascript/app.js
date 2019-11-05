@@ -43,22 +43,29 @@ $(document).ready(function () {
     $("#headline").hide();
     $("#search").hide();
 
-
   }
+
+  // Function for input validation
+  function checkDate(year) {
+    if (isNaN(year) || year < 1950 || year > 2019) {
+        return false;
+    }
+    return true;
+    }
 
 
   //On click of the search bar at top of page
-  $("#searchButton").on("click", function (event) {
+  $("#searchButton1, #searchButton2").on("click", function (event) {
     event.preventDefault();
 
+    //Sets year variable to the year that was searched on index.html
+    year = $(this).parent().find(".searchYear").val().trim();
+    console.log(year);
+
+    if (checkDate(parseInt(year))) {
     clear();
     hideHome();
     showSearch();
-
-
-    //Sets year variable to the year that was searched on index.html
-    year = $("#searchYear").val().trim();
-    console.log(year);
 
     //===================================================================================================
     //okay, so this code will take an input variable named "year". it will expect a string like "YYYY".
@@ -127,7 +134,7 @@ $(document).ready(function () {
         var showDiv = $('<div>');
         showDiv.addClass('show');
         var showImage = showResponse.results[i].poster_path;
-        var showTitle = showResponse.results[i].title;
+        var showTitle = showResponse.results[i].name;
         var showImageText = $("<img>").attr("src", "https://image.tmdb.org/t/p/w500" + showImage);
         var showTitleText = $("<p>").text((i + 1) + ": " + showTitle);
         showDiv.append(showImageText, showTitleText)
@@ -190,7 +197,10 @@ $(document).ready(function () {
       $("#gifDump").prepend(pageGif);
     });
     //===============================================================================================
+    } else {
+    $("#alert").text("Please enter a year between 1950 and 2019");
 
+    }
 
 
   }); //End of on click submit=============================================================================
